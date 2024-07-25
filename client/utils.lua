@@ -254,6 +254,8 @@ local function openUi(id)
 	}))
 end
 
+exports('createDoorAndReturnId', openUi(nil))
+
 RegisterNetEvent('ox_doorlock:triggeredCommand', function(closest)
 	openUi(closest and ClosestDoor?.id or nil)
 end)
